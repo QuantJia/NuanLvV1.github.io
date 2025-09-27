@@ -1,4 +1,18 @@
-new CozeWebSDK.WebChatClient({
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>桂香姐树洞</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>body{margin:0;background:#fff5e6;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",SimSun,sans-serif}#chat{height:100vh}</style>
+</head>
+<body>
+  <div id="chat"></div>
+
+  <!-- 官方手机端 SDK -->
+  <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.19/libs/cn/index.js"></script>
+  <script>
+    new CozeWebSDK.WebChatClient({
   config: { botId: '7553203601183621146' },
   auth: {
     type: 'token',
@@ -8,3 +22,9 @@ new CozeWebSDK.WebChatClient({
   },
   ui: { chatBot: { title: '桂香姐', uploadable: true } }
 });
+  </script>
+
+
+  
+</body>
+</html>
