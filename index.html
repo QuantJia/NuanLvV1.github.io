@@ -6,34 +6,24 @@
   <title>桂香姐树洞</title>
   <style>
     html,body{height:100%;margin:0;background:#fff5e6}
-    #chat{width:100%;height:100%;overflow:hidden}
   </style>
 </head>
 <body>
-  <div id="chat"></div>
-
-  <!-- SDK 先加载，初始化等 DOM 就绪 -->
+  <!-- SDK 自己会占满 body，不需要额外 div -->
   <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.19/libs/cn/index.js"></script>
   <script>
-    window.onload = function () {
-      new CozeWebSDK.WebChatClient({
-        config: { botId: '7553203601183621146' },
-        auth: {
-          type: 'token',
-          token: 'pat_LdVflNb1FwlTl09UucFfgilzCsZ2c2Fua62zTlGT20d9NmqfrwFua9xeD38ibOrN',
-          onRefreshToken: () => 'pat_LdVflNb1FwlTl09UucFfgilzCsZ2c2Fua62zTlGT20d9NmqfrwFua9xeD38ibOrN'
-        },
-        ui: {
-          base: { layout: 'mobile', lang: 'zh-CN' },
-          asstBtn: { show: false },
-          chatBot: {
-            title: '桂香姐',
-            uploadable: true,
-            el: '#chat'
-          }
-        }
-      });
-    };
+    new CozeWebSDK.WebChatClient({
+      config: { botId: '7553203601183621146' },
+      auth: {
+        type: 'token',
+        token: 'pat_LdVflNb1FwlTl09UucFfgilzCsZ2c2Fua62zTlGT20d9NmqfrwFua9xeD38ibOrN',
+        onRefreshToken: () => 'pat_LdVflNb1FwlTl09UucFfgilzCsZ2c2Fua62zTlGT20d9NmqfrwFua9xeD38ibOrN'
+      },
+      ui: {
+        base: { layout: 'mobile', lang: 'zh-CN' },
+        asstBtn: { show: false }   // 去掉悬浮球
+      }
+    });
   </script>
 </body>
 </html>
