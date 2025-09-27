@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>桂香姐树洞</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <style>
+    body{margin:0;background:#fff5e6;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",SimSun,sans-serif}
+    #chat{height:100vh}
+  </style>
+</head>
+<body>
+  <div id="chat"></div>
+
+  <!-- 官方手机端 SDK -->
+  <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.19/libs/cn/index.js"></script>
+  <script>
+    new CozeWebSDK.WebChatClient({
+      config: {
+        botId: '7553203601183621146'        // ★① 换成你自己的 AgentID
+      },
+      auth: {
+        type: 'token',
+        token: 'pat_LdVflNb1FwlTl09UucFfgilzCsZ2c2Fua62zTlGT20d9NmqfrwFua9xeD38ibOrN'             // ★② 换成你刚生成的 PAT（个人访问令牌）
+      },
+      ui: {
+        chatBot: {
+          title: '桂香姐',
+          uploadable: true,        // 允许上传图片/文件
+          uploadFileTypes: ['image', 'file'] // 可选：限制类型
+        },
+        base: {
+          layout: 'mobile',        // 强制移动端全屏
+          lang: 'zh-CN',
+          icon: 'https://cdn-icons-png.flaticon.com/512/7436/7436956.png' // 可选：左上角头像
+        },
+        footer: {
+          show: true,
+          text: '桂香姐心理支持'
+        }
+      }
+    });
+  </script>
+</body>
+</html>
