@@ -10,20 +10,27 @@
 </head>
 <body>
   <!-- SDK 自己会占满 body，不需要额外 div -->
-  <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.19/libs/cn/index.js"></script>
-  <script>
-    new CozeWebSDK.WebChatClient({
-      config: { botId: '7553203601183621146' },
-      auth: {
+
+<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.10/libs/cn/index.js"></script>
+<script>
+  new CozeWebSDK.WebChatClient({
+    config: {
+      bot_id: '7555117591925719055',
+    },
+    componentProps: {
+      title: '桂香姐V3',
+    },
+    auth: {
         type: 'token',
         token: 'pat_LdVflNb1FwlTl09UucFfgilzCsZ2c2Fua62zTlGT20d9NmqfrwFua9xeD38ibOrN',
         onRefreshToken: () => 'pat_LdVflNb1FwlTl09UucFfgilzCsZ2c2Fua62zTlGT20d9NmqfrwFua9xeD38ibOrN'
       },
-      ui: {
+    ui: {
         base: { layout: 'mobile', lang: 'zh-CN' },
         asstBtn: { show: false }   // 去掉悬浮球
       }
-    });
-  </script>
+  });
+</script>
+  
 </body>
 </html>
