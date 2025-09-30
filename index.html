@@ -11,7 +11,7 @@
 <body>
   <!-- SDK 自己会占满 body，不需要额外 div -->
 
-<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.10/libs/cn/index.js"></script>
+<!-- <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.10/libs/cn/index.js"></script>
 <script>
   new CozeWebSDK.WebChatClient({
     config: {
@@ -29,7 +29,30 @@
         base: { layout: 'mobile', lang: 'zh-CN' },
         asstBtn: { show: false }   // 去掉悬浮球
       }
+  }); -->
+
+<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.10/libs/cn/index.js"></script>
+<script>
+  new CozeWebSDK.WebChatClient({
+    config: {
+      bot_id: '7555892802270887990',
+    },
+    componentProps: {
+      title: '桂香姐V5',
+    },
+     auth: {
+        type: 'token',
+        token: 'pat_LdVflNb1FwlTl09UucFfgilzCsZ2c2Fua62zTlGT20d9NmqfrwFua9xeD38ibOrN',
+        onRefreshToken: () => 'pat_LdVflNb1FwlTl09UucFfgilzCsZ2c2Fua62zTlGT20d9NmqfrwFua9xeD38ibOrN'
+      },
+    ui: {
+        base: { layout: 'mobile', lang: 'zh-CN' },
+        // asstBtn: { show: false }   // 去掉悬浮球
+      }
   });
+</script>
+
+  
 </script>
   
 </body>
