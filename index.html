@@ -31,7 +31,7 @@
       }
   }); -->
 
-<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.10/libs/cn/index.js"></script>
+<!-- <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.10/libs/cn/index.js"></script>
 <script>
   new CozeWebSDK.WebChatClient({
     config: {
@@ -50,8 +50,29 @@
         // asstBtn: { show: false }   // 去掉悬浮球
       }
   });
-</script>
+</script> -->
 
+<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.10/libs/cn/index.js"></script>
+<script>
+  new CozeWebSDK.WebChatClient({
+    config: {
+      bot_id: '7556248516705304612',
+    },
+    componentProps: {
+      title: '离婚协议规划师V2',
+    },
+     auth: {
+        type: 'token',
+        token: 'pat_LdVflNb1FwlTl09UucFfgilzCsZ2c2Fua62zTlGT20d9NmqfrwFua9xeD38ibOrN',
+        onRefreshToken: () => 'pat_LdVflNb1FwlTl09UucFfgilzCsZ2c2Fua62zTlGT20d9NmqfrwFua9xeD38ibOrN'
+      },
+    ui: {
+        base: { layout: 'mobile', lang: 'zh-CN' },
+        // asstBtn: { show: false }   // 去掉悬浮球
+      }
+  });
+</script>
+  
   
 </script>
   
